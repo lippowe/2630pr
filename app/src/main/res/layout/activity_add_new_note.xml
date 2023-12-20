@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddNewNoteActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="155dp"
+        android:text="Выберите дату:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/showDateNew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="дата"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageView
+        android:id="@+id/imageCalendarNew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="135dp"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/calendar_days" />
+
+    <EditText
+        android:id="@+id/editActionNew"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="35dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Действие (жим лежа)"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showDateNew" />
+
+    <EditText
+        android:id="@+id/editCountActionNew"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="35dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Подходы (10 по 10)"
+        app:layout_constraintEnd_toEndOf="@+id/editActionNew"
+        app:layout_constraintStart_toStartOf="@+id/editActionNew"
+        app:layout_constraintTop_toBottomOf="@+id/editActionNew" />
+
+    <EditText
+        android:id="@+id/editTimeActoinNew"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="35dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Время (30 минут)"
+        app:layout_constraintEnd_toEndOf="@+id/editCountActionNew"
+        app:layout_constraintStart_toStartOf="@+id/editCountActionNew"
+        app:layout_constraintTop_toBottomOf="@+id/editCountActionNew" />
+
+    <Button
+        android:id="@+id/buttonSaveNewNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:text="Сохранить"
+        android:textSize="20sp"
+        android:backgroundTint="#0073FF"
+        app:layout_constraintEnd_toEndOf="@+id/editTimeActoinNew"
+        app:layout_constraintStart_toStartOf="@+id/editTimeActoinNew"
+        app:layout_constraintTop_toBottomOf="@+id/editTimeActoinNew" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
